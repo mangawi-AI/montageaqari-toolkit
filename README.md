@@ -4,6 +4,8 @@ A small, bilingual toolkit for Saudi real-estate brokers. It includes a live bro
 
 Everything runs in the browser. Client and billing information is never sent to a server or stored by the app.
 
+**Live demo:** https://montageaqari-toolkit.lovable.app
+
 ## Features
 
 - Saudi broker fee calculations with comma-friendly decimal inputs
@@ -19,6 +21,8 @@ Node.js and npm are required.
 npm install
 npm run dev
 ```
+
+If you use bun, `bun install` and `bun run dev` also work.
 
 ## Tech stack
 
