@@ -53,7 +53,13 @@ export function InvoiceGenerator() {
     try {
       await document.fonts.ready;
       const [{ default: html2canvas }, { jsPDF }] = await Promise.all([import("html2canvas"), import("jspdf")]);
-      const canvas = await html2canvas(previewRef.current, { scale: 3, backgroundColor: "#ffffff", useCORS: true, logging: false });
+      const canvas = await html2canvas(previewRef.current, {
+        scale: 3,
+        backgroundColor: null,
+        useCORS: true,
+        logging: false,
+        foreignObjectRendering: true,
+      });
       const pdf = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4", compress: true });
       pdf.addImage(canvas.toDataURL("image/jpeg", 0.98), "JPEG", 0, 0, 210, 297, undefined, "FAST");
       const safeNumber = values.documentNumber.trim().replace(/[^a-zA-Z0-9_-]+/g, "_") || "Document";
