@@ -77,20 +77,20 @@ export function InvoiceGenerator() {
       </ToggleGroup>
 
       <div className="space-y-5">
-        <Field label="Client name" arabic="اسم العميل" error={errors.clientName?.message}>
-          <Input className="h-12" dir="auto" autoComplete="name" {...register("clientName")} aria-invalid={Boolean(errors.clientName)} />
+        <Field htmlFor="client-name" label="Client name" arabic="اسم العميل" error={errors.clientName?.message}>
+          <Input id="client-name" className="h-12" dir="auto" autoComplete="name" {...register("clientName")} aria-invalid={Boolean(errors.clientName)} />
         </Field>
-        <Field label="Service description" arabic="وصف الخدمة">
-          <Textarea className="min-h-28 resize-y" dir="auto" {...register("description")} />
+        <Field htmlFor="service-description" label="Service description" arabic="وصف الخدمة">
+          <Textarea id="service-description" className="min-h-28 resize-y" dir="auto" {...register("description")} />
         </Field>
-        <Field label="Amount in SAR" arabic="المبلغ" error={errors.amount?.message}>
-          <div className="relative"><Input className="h-12 pe-14" inputMode="decimal" {...register("amount", { onChange: (event) => setValue("amount", formatInputNumber(event.target.value), { shouldValidate: true }) })} aria-invalid={Boolean(errors.amount)} /><span className="pointer-events-none absolute end-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-muted-foreground">SAR</span></div>
+        <Field htmlFor="document-amount" label="Amount in SAR" arabic="المبلغ" error={errors.amount?.message}>
+          <div className="relative"><Input id="document-amount" className="h-12 pe-14" inputMode="decimal" {...register("amount", { onChange: (event) => setValue("amount", formatInputNumber(event.target.value), { shouldValidate: true }) })} aria-invalid={Boolean(errors.amount)} /><span className="pointer-events-none absolute end-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-muted-foreground">SAR</span></div>
         </Field>
         <div className="grid gap-5 sm:grid-cols-2">
-          <Field label="Date" arabic="التاريخ"><Input className="h-12" type="date" {...register("date")} /></Field>
-          <Field label="Document number" arabic="رقم المستند"><Input className="h-12" {...register("documentNumber")} /></Field>
+          <Field htmlFor="document-date" label="Date" arabic="التاريخ"><Input id="document-date" className="h-12" type="date" {...register("date")} /></Field>
+          <Field htmlFor="document-number" label="Document number" arabic="رقم المستند"><Input id="document-number" className="h-12" {...register("documentNumber")} /></Field>
         </div>
-        <Field label="Freelance document no. (optional)" arabic="رقم وثيقة العمل الحر (اختياري)"><Input className="h-12" inputMode="numeric" {...register("freelanceNumber")} /></Field>
+        <Field htmlFor="freelance-number" label="Freelance document no. (optional)" arabic="رقم وثيقة العمل الحر (اختياري)"><Input id="freelance-number" className="h-12" inputMode="numeric" {...register("freelanceNumber")} /></Field>
       </div>
 
       <div className="space-y-3">
@@ -107,7 +107,7 @@ export function InvoiceGenerator() {
   );
 }
 
-interface FieldProps { label: string; arabic: string; error?: string | undefined; children: React.ReactNode; }
-function Field({ label, arabic, error, children }: FieldProps) {
-  return <div className="space-y-2"><Label className="flex items-center justify-between gap-3"><span>{label}</span><span dir="rtl" className="text-end text-muted-foreground">{arabic}</span></Label>{children}{error ? <p role="alert" className="text-sm text-destructive">{error}</p> : null}</div>;
+interface FieldProps { htmlFor: string; label: string; arabic: string; error?: string | undefined; children: React.ReactNode; }
+function Field({ htmlFor, label, arabic, error, children }: FieldProps) {
+  return <div className="space-y-2"><Label htmlFor={htmlFor} className="flex items-center justify-between gap-3"><span>{label}</span><span dir="rtl" className="text-end text-muted-foreground">{arabic}</span></Label>{children}{error ? <p role="alert" className="text-sm text-destructive">{error}</p> : null}</div>;
 }
