@@ -107,7 +107,7 @@ export function InvoiceGenerator() {
   );
 }
 
-interface FieldProps { label: string; arabic: string; error?: string; children: React.ReactNode; }
+interface FieldProps { label: string; arabic: string; error?: string | undefined; children: React.ReactNode; }
 function Field({ label, arabic, error, children }: FieldProps) {
   return <div className="space-y-2"><Label className="flex items-center justify-between gap-3"><span>{label}</span><span dir="rtl" className="text-end text-muted-foreground">{arabic}</span></Label>{children}{error ? <p role="alert" className="text-sm text-destructive">{error}</p> : null}</div>;
 }

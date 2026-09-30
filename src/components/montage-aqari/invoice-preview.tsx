@@ -17,7 +17,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(
     return (
       <div
         ref={ref}
-        className="aspect-[210/297] w-full overflow-hidden bg-document text-document-ink shadow-tool [container-type:inline-size]"
+        className="flex aspect-[210/297] w-full flex-col overflow-hidden bg-document text-document-ink shadow-tool [container-type:inline-size]"
         aria-label="Document preview"
       >
         <div className="flex h-[21cqw] items-center justify-between bg-brand-navy px-[6cqw] text-document">
@@ -35,7 +35,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(
           </div>
         </div>
 
-        <div className="px-[7cqw] py-[6cqw]">
+        <div className="flex-1 px-[7cqw] py-[6cqw]">
           <div className="mb-[6cqw] h-[0.7cqw] w-[15cqw] bg-brand-gold" />
           <div className="grid grid-cols-2 gap-[5cqw] text-[1.65cqw]">
             <div>
@@ -82,8 +82,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(
           ) : null}
         </div>
 
-        <div className="absolute" />
-        <div className="relative mt-auto border-t border-document-line px-[7cqw] py-[2.5cqw] text-center text-[1.35cqw] text-document-muted">
+        <div className="border-t border-document-line px-[7cqw] py-[2.5cqw] text-center text-[1.35cqw] text-document-muted">
           MontageAqari · By Mohsen Sami Angawi · <span dir="rtl">محسن سامي عنقاوي</span>
         </div>
       </div>
