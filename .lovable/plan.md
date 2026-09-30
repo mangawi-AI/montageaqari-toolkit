@@ -19,5 +19,5 @@
 
 ## Technical details
 - React 19, TanStack Start, Tailwind CSS v4, shadcn/ui, React Hook Form, and Zod.
-- `html2canvas` and `jsPDF` will be used only for local browser-side document export; no information leaves the device.
+- `html-to-image` and `jsPDF` will be used only for local browser-side document export; no information leaves the device.
 - Theme selection remains in React state for the current page session only and defaults to the operating system preference.

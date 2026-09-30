@@ -25,6 +25,6 @@ npm run dev
 - React, TypeScript, and TanStack Start
 - Tailwind CSS and shadcn/ui
 - React Hook Form and Zod
-- html2canvas and jsPDF
+- html-to-image and jsPDF
 
 By Mohsen Sami Angawi.
