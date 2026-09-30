@@ -1,29 +1,30 @@
-# Welcome to your Lovable project
+# MontageAqari Broker Toolkit
 
-This project was built with [Lovable](https://lovable.dev).
+A small, bilingual toolkit for Saudi real-estate brokers. It includes a live broker fee calculator and a branded quote/invoice PDF generator.
 
-## Build with Lovable
+Everything runs in the browser. Client and billing information is never sent to a server or stored by the app.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Features
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- Saudi broker fee calculations with comma-friendly decimal inputs
+- Branded bilingual quote and invoice previews
+- Arabic-safe A4 PDF downloads
+- Light and dark themes that follow the current device by default
 
-## Development
+## Run locally
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Node.js and npm are required.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
 
-## Built with
+## Tech stack
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+- React, TypeScript, and TanStack Start
+- Tailwind CSS and shadcn/ui
+- React Hook Form and Zod
+- html2canvas and jsPDF
+
+By Mohsen Sami Angawi.
