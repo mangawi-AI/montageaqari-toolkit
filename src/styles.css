@@ -66,6 +66,11 @@
   --color-brand-navy: var(--brand-navy);
   --color-brand-navy-2: var(--brand-navy-2);
   --color-paper: var(--paper);
+  --color-document: oklch(1 0 0);
+  --color-document-ink: var(--brand-navy);
+  --color-document-muted: oklch(0.46 0.03 250);
+  --color-document-soft: oklch(0.96 0.012 88);
+  --color-document-line: oklch(0.83 0.023 87);
   --shadow-tool: 0 18px 50px -28px color-mix(in oklab, var(--brand-navy) 32%, transparent);
 }
 
