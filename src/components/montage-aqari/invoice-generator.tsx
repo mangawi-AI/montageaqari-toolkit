@@ -57,6 +57,7 @@ export function InvoiceGenerator() {
         quality: 0.98,
         pixelRatio: 3,
         cacheBust: true,
+        skipFonts: true,
       });
       const pdf = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4", compress: true });
       pdf.addImage(image, "JPEG", 0, 0, 210, 297, undefined, "FAST");
