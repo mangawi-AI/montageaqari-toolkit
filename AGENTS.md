@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep all MontageAqari document generation in the browser; privacy is a core product promise.
+- Render PDFs from the branded HTML preview after fonts load so Arabic shaping and RTL order remain correct.
